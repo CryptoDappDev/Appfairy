@@ -356,7 +356,8 @@ class ViewWriter extends Writer {
           if (Controller) return Controller
 
           try {
-            Controller = require('${ctrlsDir}/${this.ctrlClassName}')
+            var tmp = '../controllers/'
+            Controller = require('tmp.concat(ctrlClassName)')
             Controller = Controller.default || Controller
 
             return Controller
